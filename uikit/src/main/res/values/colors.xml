@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#1A6FEE</color>
+    <color name="accent_inactive">#C9D4FB</color>
+    <color name="black">#000000</color>
+    <color name="error">#FD3535</color>
+    <color name="white">#FFFFFF</color>
+    <color name="success">#00B712</color>
+    <color name="input_bg">#F5F5F9</color>
+    <color name="input_stroke">#EBEBEB</color>
+    <color name="input_icon">#B8C1CC</color>
+    <color name="placeholder">#939396</color>
+    <color name="description">#7E7E9A</color>
+    <color name="card_stroke">#F4F4F4</color>
+</resources>
