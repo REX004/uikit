@@ -1,155 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="title_1_semi_bold">
-        <item name="android:fontFamily">@font/semi_bold</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:lineHeight">28dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0.33</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="title_1_heavy">
-        <item name="android:fontFamily">@font/bold</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:lineHeight">28dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0.33</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="title_2_regular">
-        <item name="android:fontFamily">@font/regular</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:lineHeight">28dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0.38</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="title_2_semibold">
-        <item name="android:fontFamily">@font/semi_bold</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:lineHeight">28dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0.38</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="title_2_heavy">
-        <item name="android:fontFamily">@font/heavy</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:lineHeight">28dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0.38</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-
-    <style name="title_3_regular">
-        <item name="android:fontFamily">@font/regular</item>
-        <item name="android:textSize">17sp</item>
-        <item name="android:lineHeight">24dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="title_3_medium">
-        <item name="android:fontFamily">@font/medium</item>
-        <item name="android:textSize">17sp</item>
-        <item name="android:lineHeight">24dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="title_3_semibold">
-        <item name="android:fontFamily">@font/semi_bold</item>
-        <item name="android:textSize">17sp</item>
-        <item name="android:lineHeight">24dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-
-    <style name="headline_regular">
-        <item name="android:fontFamily">@font/regular</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:lineHeight">20dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">-0.32</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="headline_medium">
-        <item name="android:fontFamily">@font/regular</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:lineHeight">20dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">-0.32</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-
-    <style name="text_regular">
-        <item name="android:fontFamily">@font/regular</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:lineHeight">20dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="text_medium">
-        <item name="android:fontFamily">@font/medium</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:lineHeight">20dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-
-    <style name="caption_regular">
-        <item name="android:fontFamily">@font/regular</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:lineHeight">20dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="caption_semibold">
-        <item name="android:fontFamily">@font/semi_bold</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:lineHeight">20dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="caption_2_regular">
-        <item name="android:fontFamily">@font/regular</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:lineHeight">16dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="caption_2_bold">
-        <item name="android:fontFamily">@font/bold</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:lineHeight">16dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-
     <style name="button_big">
         <item name="android:fontFamily">@font/semi_bold</item>
         <item name="android:textSize">17sp</item>
@@ -177,6 +28,64 @@
         <item name="android:letterSpacing">0.01</item>
         <item name="android:textAlignment">center</item>
         <item name="android:paddingVertical">14dp</item>
+    </style>
+
+    <style name="UIKit.ShapeAppearance.Input" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/ten</item>
+    </style>
+
+    <style name="UIKit.ShapeAppearance.Button" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/ten</item>
+    </style>
+
+    <style name="UIKit.TextAppearance.InputText" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="UIKit.TextAppearance.InputHint" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/placeholder</item>
+    </style>
+
+    <style name="UIKit.Widget.TextInputLayout.Default" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/input_bg</item>
+        <item name="shapeAppearance">@style/UIKit.ShapeAppearance.Input</item>
+        <item name="hintTextAppearance">@style/UIKit.TextAppearance.InputHint</item>
+        <item name="android:padding">0dp</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeErrorColor">@color/error</item>
+        <item name="errorTextColor">@color/error</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxStrokeColor">@color/uikit_text_input_box_stroke_selector</item>
+        <item name="hintTextColor">@color/uikit_text_input_hint_text_color_selector</item>
+        <item name="helperTextTextAppearance">@style/UIKit.TextAppearance.HelperText</item>
+        <item name="errorTextAppearance">@style/UIKit.TextAppearance.ErrorText</item>
+        <item name="errorIconTint">@color/error
+        </item>
+    </style>
+
+    <style name="UIKit.Widget.TextInputEditText.Default" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textAppearance">@style/UIKit.TextAppearance.InputText</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:background">@drawable/uikit_edit_text_error_background_selector</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="UIKit.TextAppearance.HelperText" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/description</item>
+    </style>
+
+    <style name="UIKit.TextAppearance.ErrorText" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/error</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
 </resources>

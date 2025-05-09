@@ -4,17 +4,18 @@ plugins {
 }
 
 android {
-    namespace = "mad.training.tmatule"
+    namespace = "mad.training.uikit_show"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "mad.training.tmatule"
+        applicationId = "mad.training.uikit_show"
         minSdk = 33
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        // consumerProguardFiles удален
     }
 
     buildTypes {
@@ -33,15 +34,13 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildFeatures { // ДОБАВЛЕНО (если нужен ViewBinding)
+    buildFeatures {
         viewBinding = true
     }
 }
 
 dependencies {
-    implementation(project(":uikit"))    // ДОБАВЛЕНО
-    implementation(project(":network"))  // ДОБАВЛЕНО
-
+    implementation(project(":uikit"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

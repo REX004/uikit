@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Поле для ввода: Default (Placeholder)"
+            android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/UIKit.Widget.TextInputLayout.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите имя">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/UIKit.Widget.TextInputEditText.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Поле для ввода: With Text"
+            android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/UIKit.Widget.TextInputLayout.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/UIKit.Widget.TextInputEditText.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Иван" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Поле для ввода: Focused (синяя рамка)"
+            android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/UIKit.Widget.TextInputLayout.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите имя (фокус)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_edit_text_focused"
+                style="@style/UIKit.Widget.TextInputEditText.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Поле для ввода: Error State"
+            android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_error"
+            style="@style/UIKit.Widget.TextInputLayout.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя (ошибка)"
+            app:errorEnabled="false"> <!-- Управляем программно, чтобы показать и без ошибки сначала -->
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/UIKit.Widget.TextInputEditText.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Некорректное имя" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Поле для ввода: Disabled"
+            android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/UIKit.Widget.TextInputLayout.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Имя (недоступно)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/UIKit.Widget.TextInputEditText.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="Текст в неактивном поле" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Добавь пример для поля с цифрой "1" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Поле для ввода: Single Digit (OTP-like)"
+            android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/UIKit.Widget.TextInputLayout.Default"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint=""> <!-- Хинт не нужен -->
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/UIKit.Widget.TextInputEditText.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="1"
+                android:text="1"
+                android:textAlignment="center" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/checkBt"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Проверка input text" />
+    </LinearLayout>
+</ScrollView>

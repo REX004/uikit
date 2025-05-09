@@ -23,3 +23,4 @@ rootProject.name = "TMatule"
 include(":app")
 include(":uikit")
 include(":network")
+include(":uikit-show")
