@@ -89,4 +89,29 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+
+    <style name="UIKit.TextAppearance.BottomNav.Active" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/semi_bold
+        </item>
+        <item name="android:textSize">12sp</item> <!-- Уточни размер по Figma -->
+    </style>
+
+    <style name="UIKit.TextAppearance.BottomNav.Inactive" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/regular
+        </item>
+        <item name="android:textSize">12sp</item> <!-- Уточни размер по Figma -->
+    </style>
+
+    <style name="UIKit.Widget.BottomNavigationView.Default" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="background">@color/white</item>
+        <item name="itemIconTint">@color/uikit_bottom_nav_item_tint_selector</item>
+        <item name="itemTextColor">@color/uikit_bottom_nav_item_tint_selector</item>
+        <item name="itemTextAppearanceActive">@style/UIKit.TextAppearance.BottomNav.Active</item>
+        <item name="itemTextAppearanceInactive">@style/UIKit.TextAppearance.BottomNav.Inactive
+        </item>
+        <item name="elevation">0dp</item>
+        <item name="labelVisibilityMode">labeled</item>
+
+    </style>
+
 </resources>

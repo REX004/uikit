@@ -6,7 +6,7 @@
         Определяет основные цвета, типографику по умолчанию и стили виджетов по умолчанию для UI Kit.
         Автор: Твое Имя
     -->
-    <style name="Theme.UIKit.Base" parent="Theme.Material3.DayNight.NoActionBar"> <!-- или Theme.MaterialComponents.DayNight.NoActionBar -->
+    <style name="Theme.UIKit.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar"> <!-- или Theme.MaterialComponents.DayNight.NoActionBar -->
         <item name="colorPrimary">@color/accent</item> <!-- Твой главный акцентный цвет -->
         <item name="colorOnPrimary">@color/white</item> <!-- Цвет текста/иконок на primary фоне -->
 
