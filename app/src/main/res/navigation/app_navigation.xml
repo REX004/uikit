@@ -16,7 +16,7 @@
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
-        android:id="@+id/catalogFragment"
+        android:id="@+id/navigation_catalog"
         android:name="mad.training.tmatule.presentation.catalog.CatalogFragment"
         android:label="fragment_catalog"
         tools:layout="@layout/fragment_catalog" />
@@ -41,12 +41,12 @@
         android:label="fragment_create_profile"
         tools:layout="@layout/fragment_create_profile" />
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/navigation_main"
         android:name="mad.training.tmatule.presentation.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/projectsFragment"
+        android:id="@+id/navigation_projects"
         android:name="mad.training.tmatule.presentation.projects.ProjectsFragment"
         android:label="fragment_projects"
         tools:layout="@layout/fragment_projects" />
@@ -55,4 +55,9 @@
         android:name="mad.training.tmatule.presentation.auth.pass.telegram.TelegramOtpFragment"
         android:label="fragment_telegram_otp"
         tools:layout="@layout/fragment_telegram_otp" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="mad.training.tmatule.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
