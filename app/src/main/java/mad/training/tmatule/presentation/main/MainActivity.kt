@@ -19,19 +19,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        handleInitialNavigation(savedInstanceState)
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
         navController = navHostFragment.navController
-        changeVisiblity()
+        handleInitialNavigation(savedInstanceState)
+
+        setupBottomNavVisibility()
     }
 
     companion object {
@@ -43,10 +44,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun changeVisiblity() {
+    private fun setupBottomNavVisibility() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.navigation_main, R.id.navigation_catalog, R.id.navigation_profile, R.id.navigation_projects -> {
+                R.id.navigation_main,
+                R.id.navigation_catalog,
+                R.id.navigation_profile,
+                R.id.navigation_projects -> {
                     binding.bottomNavigation.visibility = View.VISIBLE
                 }
 

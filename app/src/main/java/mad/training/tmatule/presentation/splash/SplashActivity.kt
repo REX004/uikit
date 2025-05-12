@@ -31,6 +31,6 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun navigateToMain() {
-        startActivity(MainActivity.createIntent(this, destination = "home"))
+        startActivity(MainActivity.createIntent(this, destination = "auth"))
     }
 }
