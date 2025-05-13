@@ -6,4 +6,15 @@
     <string name="catalog_screen">Каталог</string>
     <string name="profile_screen">Профиль</string>
     <string name="projects_screen">Проекты</string>
+    <string name="login_title">Добро пожаловать!</string>
+    <string name="login_description">Войдите, чтобы пользоваться функциями приложения</string>
+    <string name="example_mail_com">example@mail.com</string>
+    <string name="e_mail">Вход по E-mail</string>
+    <string name="password">Пароль</string>
+    <string name="next">Далее</string>
+    <string name="forgot_pass">Забыл пароль?</string>
+    <string name="log_with_other">Или войдите с помощью</string>
+    <string name="create_profile">Создание профиля</string>
+    <string name="create_profile_des_1">Без профиля вы не сможете создавать проекты.</string>
+    <string name="create_profile_des_2">В профиле будут храниться результаты проектов и ваши описания.</string>
 </resources>

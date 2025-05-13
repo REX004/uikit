@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/uikit_input_stroke_focused_transparent" android:state_focused="true"/>
+    <item android:color="@color/input_stroke"/>
+</selector>

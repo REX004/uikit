@@ -28,6 +28,7 @@ abstract class BaseFragment<VB : ViewBinding>(private val bindingInflater: (infl
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         applyClick()
+        observeViewModel()
     }
 
     override fun onDestroyView() {
@@ -51,5 +52,8 @@ abstract class BaseFragment<VB : ViewBinding>(private val bindingInflater: (infl
 
     }
 
+    open fun observeViewModel() {
+
+    }
 
 }

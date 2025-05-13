@@ -59,24 +59,31 @@
         <item name="hintTextAppearance">@style/UIKit.TextAppearance.InputHint</item>
         <item name="android:padding">0dp</item>
         <item name="errorIconDrawable">@null</item>
+
         <item name="boxStrokeWidth">1dp</item>
-        <item name="boxStrokeErrorColor">@color/error</item>
-        <item name="errorTextColor">@color/error</item>
         <item name="boxStrokeWidthFocused">2dp</item>
-        <item name="boxStrokeColor">@color/uikit_text_input_box_stroke_selector</item>
+
+        <item name="boxStrokeColor">@color/uikit_input_stroke_selector</item>
+
+        <item name="boxStrokeErrorColor">@color/error</item>
+
         <item name="hintTextColor">@color/uikit_text_input_hint_text_color_selector</item>
-        <item name="helperTextTextAppearance">@style/UIKit.TextAppearance.HelperText</item>
+
         <item name="errorTextAppearance">@style/UIKit.TextAppearance.ErrorText</item>
-        <item name="errorIconTint">@color/error
-        </item>
+        <item name="errorTextColor">@color/error</item>
+
+        <item name="helperTextTextAppearance">@style/UIKit.TextAppearance.HelperText</item>
+        <item name="helperTextTextColor">@color/description</item>
     </style>
 
     <style name="UIKit.Widget.TextInputEditText.Default" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
-        <item name="android:textAppearance">@style/UIKit.TextAppearance.InputText</item>
+        <item name="android:textAppearance">@style/text_regular</item>
         <item name="android:paddingTop">14dp</item>
         <item name="android:paddingBottom">14dp</item>
         <item name="android:background">@drawable/uikit_edit_text_error_background_selector</item>
         <item name="android:paddingStart">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="hintTextColor">@color/input_icon</item>
         <item name="android:paddingEnd">16dp</item>
     </style>
 

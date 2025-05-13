@@ -12,4 +12,6 @@
     <color name="placeholder">#939396</color>
     <color name="description">#7E7E9A</color>
     <color name="card_stroke">#F4F4F4</color>
+    <color name="uikit_input_stroke_focused_transparent">#801A6FEE</color>
+    <color name="uikit_input_background_error_transparent">#1AFD3535</color>
 </resources>
