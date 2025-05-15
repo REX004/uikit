@@ -4,6 +4,7 @@ import io.reactivex.rxjava3.core.Single
 import mad.training.network.model.cart.AddToCartRequest
 import mad.training.network.model.cart.CartResponse
 import mad.training.network.model.cart.UpdateCartItemRequest
+import mad.training.network.model.department.DepartmentResponse
 import mad.training.network.model.login.LoginRequest
 import mad.training.network.model.login.LoginResponse
 import mad.training.network.model.order.OrderConfirmationResponse
@@ -22,7 +23,7 @@ import retrofit2.http.*
 interface ApiService {
 
     companion object {
-        const val BASE_URL = "https://cjachvvqezbpuifyilgq.supabase.co"
+        const val BASE_URL = "http://mad2019.hakta.pro/api/"
     }
 
     @POST("auth/login")
@@ -37,6 +38,11 @@ interface ApiService {
     @GET("promotions")
     fun getPromotions():
             Single<Response<List<PromotionResponse>>>
+
+    @GET("department")
+    fun getDepartment(
+
+    ): Single<DepartmentResponse>
 
     @GET("catalog")
     fun getCatalog(
