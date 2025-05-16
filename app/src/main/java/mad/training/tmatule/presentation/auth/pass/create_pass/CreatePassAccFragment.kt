@@ -25,10 +25,13 @@ class CreatePassAccFragment :
             override fun onDigitClicked(digit: Char) {
                 binding.staus.appendDigit(digit)
                 Log.d("CreatePassAccFragment", "Текущий PIN: ${binding.staus.getPin()}")
+                if (binding.staus.getPin() == "1234") {
+                    findNavController().navigate(R.id.createProfileFragment)
+                }
             }
 
             override fun onBackspaceClicked() {
-                binding.staus.deleteDigit() // Вызываем метод у PinCodeFieldView
+                binding.staus.deleteDigit()
                 Log.d(
                     "CreatePassAccFragment",
                     "Текущий PIN после удаления: ${binding.staus.getPin()}"
@@ -43,7 +46,7 @@ class CreatePassAccFragment :
         binding.missBt.setOnClickListener {
             Toast.makeText(requireContext(), "Действие 'Пропустить' нажато", Toast.LENGTH_SHORT)
                 .show()
-            findNavController().navigate(R.id.navigation_main) // Замени на свой ID
+            findNavController().navigate(R.id.createProfileFragment) // Замени на свой ID
         }
     }
 
@@ -52,14 +55,12 @@ class CreatePassAccFragment :
         Log.i("CreatePassAccFragment", "PIN полностью введен: $pin. Длина: ${pin.length}")
         Toast.makeText(requireContext(), "PIN успешно создан: $pin", Toast.LENGTH_LONG).show()
 
-        // Здесь должна быть твоя логика:
+        // Здесь должна быть логика:
         // - Сохранение PIN-кода (например, в ViewModel, SharedPreferences (зашифрованно!), или передача дальше)
         // - Переход на следующий экран
         // - Показ сообщения об успехе/ошибке и т.д.
 
-        // Пример: очистить поле и клавиатуру для следующего возможного ввода
-        // или если это экран подтверждения, то не очищать.
-        // binding.staus.clear() // Очищаем поле отображения
+         binding.staus.clear() // Очищаем поле отображения
 
         // Пример навигации на следующий экран (например, подтверждение PIN или главный экран)
         // findNavController().navigate(R.id.action_createPassAccFragment_to_confirmPassFragment, Bundle().apply {

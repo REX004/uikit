@@ -1,47 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginHorizontal="20dp"
     tools:context=".presentation.auth.create_profile.CreateProfileFragment">
 
-    <TextView
-        android:id="@+id/page_title"
-        style="@style/title_1_heavy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/create_profile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <LinearLayout
-        android:id="@+id/descriptionContainer"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/page_title">
+        android:layout_height="wrap_content">
+
 
         <TextView
-            style="@style/text_regular"
+            android:id="@+id/page_title"
+            style="@style/title_1_heavy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/create_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/descriptionContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/create_profile_des_1"
-            android:textAlignment="gravity"
-            android:textColor="@color/placeholder" />
+            android:layout_marginTop="44dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/page_title">
 
-        <TextView
-            style="@style/text_regular"
+            <TextView
+                style="@style/text_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/create_profile_des_1"
+                android:textAlignment="gravity"
+                android:textColor="@color/placeholder" />
+
+            <TextView
+                style="@style/text_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/create_profile_des_2"
+                android:textAlignment="gravity"
+                android:textColor="@color/placeholder" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inputsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/create_profile_des_2"
-            android:textAlignment="gravity"
-            android:textColor="@color/placeholder" />
-    </LinearLayout>
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/descriptionContainer">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <mad.training.uikit.InputFieldView
+                android:id="@+id/nameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <mad.training.uikit.InputFieldView
+                android:id="@+id/lastNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" />
+
+            <mad.training.uikit.InputFieldView
+                android:id="@+id/surnameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" />
+
+            <mad.training.uikit.InputFieldView
+                android:id="@+id/dateBirthdayEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" />
+
+            <mad.training.uikit.SelectorFieldView
+                android:id="@+id/genderSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" />
+
+            <mad.training.uikit.InputFieldView
+                android:id="@+id/telegramEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" />
+        </LinearLayout>
+
+        <mad.training.uikit.PrimaryButton
+            android:id="@+id/createBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginBottom="32dp"
+            android:text="Создать"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputsContainer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
