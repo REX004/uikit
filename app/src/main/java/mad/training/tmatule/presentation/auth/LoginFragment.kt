@@ -86,6 +86,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
             val email = binding.emailEt.text.toString()
             val password = binding.passwordEt.text.toString()
             viewModel.loginUser(email, password)
+            findNavController().navigate(R.id.createPassAccFragment)
         }
 
         binding.socialLoginBlock.vkBt.setOnClickListener {

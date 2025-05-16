@@ -83,7 +83,7 @@
         <item name="android:background">@drawable/selector_pin_key_background</item>
         <item name="android:textColor">@color/selector_pin_key_text_color</item>
         <item name="android:textSize">@dimen/pin_key_text_size</item>
-        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_marginStart">@dimen/pin_key_margin</item>
         <item name="android:layout_marginEnd">@dimen/pin_key_margin</item>
@@ -93,6 +93,14 @@
         <item name="android:focusable">true</item>
         <item name="android:padding">0dp
         </item>
+    </style>
+
+    <style name="UIKit.PinDot.Simple" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">12dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:src">@drawable/pin_dot_inactive</item>
     </style>
 
     <style name="UIKit.Widget.TextInputEditText.Default" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">

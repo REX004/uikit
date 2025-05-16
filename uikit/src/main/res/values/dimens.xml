@@ -15,6 +15,6 @@
 
     <dimen name="pin_key_size">80dp</dimen> <!-- Размер кнопки -->
     <dimen name="pin_key_margin">8dp</dimen> <!-- Отступы между кнопками -->
-    <dimen name="pin_key_text_size">32sp</dimen> <!-- Размер текста цифр -->
+    <dimen name="pin_key_text_size">24sp</dimen> <!-- Размер текста цифр -->
     <dimen name="pin_backspace_icon_size">28dp</dimen>
 </resources>

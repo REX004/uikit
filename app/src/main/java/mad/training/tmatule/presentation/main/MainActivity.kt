@@ -65,8 +65,8 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             val destination = intent.getStringExtra(EXTRA_DESTINATION)
             when (destination) {
-                "home" -> navController.navigate(R.id.navigation_main)
-                "auth" -> navController.navigate(R.id.loginFragment)
+                "home" -> navController.navigate(R.id.createPassAccFragment)
+                "auth" -> navController.navigate(R.id.createPassAccFragment)
             }
         }
     }
