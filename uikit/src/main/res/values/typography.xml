@@ -74,6 +74,11 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+<!--    <style name="UIKit.PinDot">-->
+<!--        <item name="android:layout_marginStart">8dp</item>-->
+<!--        <item name="android:layout_marginEnd">8dp</item>-->
+<!--        <item name="android:src">@drawable/pin_dot_inactive</item> &lt;!&ndash; По умолчанию неактивная &ndash;&gt;-->
+<!--    </style>-->
 
     <style name="headline_regular">
         <item name="android:fontFamily">@font/regular</item>

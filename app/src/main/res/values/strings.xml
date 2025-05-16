@@ -17,4 +17,11 @@
     <string name="create_profile">Создание профиля</string>
     <string name="create_profile_des_1">Без профиля вы не сможете создавать проекты.</string>
     <string name="create_profile_des_2">В профиле будут храниться результаты проектов и ваши описания.</string>
+    <string name="miss_text">Пропустить</string>
+    <string name="create_pass">Создайте пароль</string>
+    <string name="create_pass_description">Для защиты вашиз персональных данных</string>
+    <string name="name_example">Чмо</string>
+    <string name="my_orders">Мои заказы</string>
+    <string name="notifications">Уведомления</string>
+    <string name="polit_conf">Политика конфедециональности</string>
 </resources>
