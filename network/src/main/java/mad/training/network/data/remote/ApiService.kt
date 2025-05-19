@@ -23,12 +23,18 @@ import retrofit2.http.*
 interface ApiService {
 
     companion object {
-        const val BASE_URL = "http://mad2019.hakta.pro/api/"
+        const val BASE_URL = "https://cjachvvqezbpuifyilgq.supabase.co"
     }
 
-    @POST("auth/login")
-    fun login(@Body body: LoginRequest):
-            Single<Response<LoginResponse>>
+    @GET("rest/v1/user_data")
+    fun login(
+        @Query("email") email: String,
+        @Query("password") pass: String,
+        @Query("limit") limit: Int = 1,
+        @Query("select") select: String = "*",
+
+        ):
+            Single<List<LoginResponse>>
 
     @POST("profile_create_with_otp")
     fun createProfileAndOtp(

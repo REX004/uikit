@@ -9,12 +9,24 @@ import mad.training.network.model.login.LoginRequest
 import mad.training.network.model.login.LoginResponse
 import mad.training.network.model.profile.CreateProfile
 import mad.training.network.model.profile.OtpResponse
+import mad.training.network.util.ApiResult
+import mad.training.network.util.NetworkErrorHandler
 
 class AuthRepositoryImpl(
     private val api: ApiService
 ) : AuthRepository {
-    override fun login(request: LoginRequest): Single<Result<LoginResponse, NetworkError>> {
-        return wrapNetworkRequest(api.login(request))
+    override fun login(request: LoginRequest): Single<ApiResult<LoginResponse>> {
+        return api.login(request.email, request.password)
+            .map<ApiResult<LoginResponse>> { authResponse ->
+                if (authResponse.isNotEmpty()) {
+                    ApiResult.Success(authResponse[0])
+                } else {
+                    ApiResult.Error(message = "Пользователь не найден или неверные данные")
+                }
+            }
+            .onErrorReturn { throwable ->
+                NetworkErrorHandler.handleThrowable(throwable)
+            }
     }
 
     override fun createProfileAndOtp(request: CreateProfile): Single<Result<OtpResponse, NetworkError>> {

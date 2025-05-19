@@ -19,7 +19,6 @@ val networkModule = module {
 
     single<TokenProvider> {
         SharedPreferencesTokenProvider()
-
     }
 
     single { SupabaseAuthInterceptor(get()) }

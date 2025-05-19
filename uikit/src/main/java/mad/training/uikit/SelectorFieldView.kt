@@ -113,7 +113,6 @@ class SelectorFieldView @JvmOverloads constructor(
         }
     }
 
-    // Вспомогательная функция
     private fun dpToPx(dp: Int): Int {
         return (dp * resources.displayMetrics.density).toInt()
     }

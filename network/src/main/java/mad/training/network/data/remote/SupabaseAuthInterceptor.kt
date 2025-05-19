@@ -10,7 +10,7 @@ class SupabaseAuthInterceptor(
         val originalRequest = chain.request()
         val requestBuilder = originalRequest.newBuilder()
 
-//        requestBuilder.header("apiKey", tokenProvider.getSupabaseApiKey())
+        requestBuilder.header("apikey", tokenProvider.getSupabaseApiKey())
 
         val request = requestBuilder.build()
         return chain.proceed(request)

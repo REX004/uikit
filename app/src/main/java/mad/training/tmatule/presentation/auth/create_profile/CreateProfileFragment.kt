@@ -61,10 +61,8 @@ class CreateProfileFragment :
             checkFieldsAndSetButtonState()
         }
 
-        // Обработчик нажатия на кнопку "Создать"
         binding.createBt.setOnClickListener {
             if (binding.createBt.currentState == PrimaryButton.State.ACTIVE) {
-                // Все поля заполнены, выполняем действие
                 val name = binding.nameEt.getText()
                 val lastName = binding.lastNameEt.getText()
                 val surname = binding.surnameEt.getText()

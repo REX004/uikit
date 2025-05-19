@@ -32,7 +32,7 @@ class HomeViewModel(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { apiResult -> // ApiResult<List<Department>>
+                { apiResult ->
                     when (apiResult) {
                         is ApiResult.Success -> {
                             _uiState.value = DepartmentsUiState.Success(apiResult.data)
@@ -51,5 +51,9 @@ class HomeViewModel(
                     )
                 }
             )
+    }
+
+    fun searchProduct() {
+
     }
 }

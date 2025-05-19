@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputLayout
@@ -34,48 +35,21 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
 
     override fun observeViewModel() {
         super.observeViewModel()
-        // Здесь будешь наблюдать за LiveData из ViewModel, например, для показа ошибок валидации
-        viewModel.emailError.observe(viewLifecycleOwner) { errorMessage ->
-            if (errorMessage != null) {
-                binding.emailTil.error = errorMessage
-                // Устанавливаем фон и обводку для ошибки
-                binding.emailTil.boxBackgroundColor = ContextCompat.getColor(
-                    requireContext(),
-                    mad.training.uikit.R.color.uikit_keypad_button_background_default
-                )
-                // Обводка уже должна стать красной из-за setError, но можно подстраховаться
-                // binding.emailTil.boxStrokeColor = ContextCompat.getColor(requireContext(), R.color.error)
-            } else {
-                binding.emailTil.error = null
-                binding.emailTil.isErrorEnabled = false // Важно для сброса состояния ошибки
-                // Возвращаем обычный фон и обводку
-                binding.emailTil.boxBackgroundColor =
-                    ContextCompat.getColor(requireContext(), mad.training.uikit.R.color.input_bg)
-                updateTextInputLayoutAppearance(
-                    binding.emailTil,
-                    binding.emailEt.text.isNullOrEmpty(),
-                    binding.emailTil.hasFocus()
-                )
-            }
-        }
+        viewModel.loginState.observe(viewLifecycleOwner) { loginResult ->
+            when (loginResult) {
+                LoginUiState.Loading -> {
+                    binding.progressBar.visibility = View.VISIBLE
+                }
 
-        viewModel.passwordError.observe(viewLifecycleOwner) { errorMessage ->
-            if (errorMessage != null) {
-                binding.passwordTil.error = errorMessage
-                binding.passwordTil.boxBackgroundColor = ContextCompat.getColor(
-                    requireContext(),
-                    mad.training.uikit.R.color.uikit_keypad_button_background_default
-                )
-            } else {
-                binding.passwordTil.error = null
-                binding.passwordTil.isErrorEnabled = false
-                binding.passwordTil.boxBackgroundColor =
-                    ContextCompat.getColor(requireContext(), mad.training.uikit.R.color.input_bg)
-                updateTextInputLayoutAppearance(
-                    binding.passwordTil,
-                    binding.passwordEt.text.isNullOrEmpty(),
-                    binding.passwordTil.hasFocus()
-                )
+                is LoginUiState.Success -> {
+                    binding.progressBar.visibility = View.GONE
+                    findNavController().navigate(R.id.navigation_main)
+                }
+
+                is LoginUiState.showError -> {
+                    binding.progressBar.visibility = View.GONE
+                    showAlertDialog(loginResult.message)
+                }
             }
         }
     }
@@ -86,7 +60,6 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
             val email = binding.emailEt.text.toString()
             val password = binding.passwordEt.text.toString()
             viewModel.loginUser(email, password)
-            findNavController().navigate(R.id.createPassAccFragment)
         }
 
         binding.socialLoginBlock.vkBt.setOnClickListener {
@@ -96,7 +69,6 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
             // TODO: Yandex login logic
         }
     }
-
 
 
     private fun setupInputListeners() {
@@ -146,7 +118,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                 else -> null
             }
             til?.let {
-                if (!it.isErrorEnabled) { // Обновляем вид только если нет активной ошибки
+                if (!it.isErrorEnabled) {
                     updateTextInputLayoutAppearance(
                         it,
                         (it.editText?.text.isNullOrEmpty()),
@@ -193,5 +165,19 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
             textInputLayout.boxStrokeColor =
                 ContextCompat.getColor(requireContext(), mad.training.uikit.R.color.input_icon)
         }
+    }
+
+    private fun showAlertDialog(message: String) {
+        AlertDialog.Builder(requireContext())
+            .setMessage(message)
+            .setTitle("Some error")
+            .setPositiveButton("Ok") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setNegativeButton("Back") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setCancelable(false)
+            .show()
     }
 }

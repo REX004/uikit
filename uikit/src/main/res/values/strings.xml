@@ -2,5 +2,8 @@
 <resources>
     <string name="error_example">error example</string>
     <string name="pin_keyboard_backspace_description">Backspace</string>
-
+    <string name="main_screen">Главная</string>
+    <string name="catalog_screen">Каталог</string>
+    <string name="profile_screen">Профиль</string>
+    <string name="projects_screen">Проекты</string>
 </resources>
