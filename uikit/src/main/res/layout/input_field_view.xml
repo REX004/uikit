@@ -1,0 +1,27 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_input"
+        android:hint="Введите значение"
+        android:imeOptions="actionGo"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="14dp"
+        android:textAppearance="@style/text_regular"
+        android:textColor="@color/black"
+        android:textColorHint="@color/placeholder" />
+
+    <TextView
+        android:id="@+id/error_text"
+        style="@style/caption_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_example"
+        android:textAlignment="gravity"
+        android:textColor="@color/error"
+        android:visibility="gone" />
+
+</merge>

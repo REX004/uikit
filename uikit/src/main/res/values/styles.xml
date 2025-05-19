@@ -22,6 +22,7 @@
         <item name="android:outlineProvider">none</item>
         <item name="android:lineHeight">20dp</item>
         <item name="android:textAllCaps">false</item>
+        <item name="android:paddingHorizontal">16dp</item>
         <item name="backgroundTint">@color/bg_big_button</item>
         <item name="android:textColor">@color/white</item>
         <item name="cornerRadius">10dp</item>
@@ -58,24 +59,58 @@
         <item name="hintTextAppearance">@style/UIKit.TextAppearance.InputHint</item>
         <item name="android:padding">0dp</item>
         <item name="errorIconDrawable">@null</item>
+
         <item name="boxStrokeWidth">1dp</item>
-        <item name="boxStrokeErrorColor">@color/error</item>
-        <item name="errorTextColor">@color/error</item>
         <item name="boxStrokeWidthFocused">2dp</item>
-        <item name="boxStrokeColor">@color/uikit_text_input_box_stroke_selector</item>
+
+        <item name="boxStrokeColor">@color/uikit_input_stroke_selector</item>
+
+        <item name="boxStrokeErrorColor">@color/error</item>
+
         <item name="hintTextColor">@color/uikit_text_input_hint_text_color_selector</item>
-        <item name="helperTextTextAppearance">@style/UIKit.TextAppearance.HelperText</item>
+
         <item name="errorTextAppearance">@style/UIKit.TextAppearance.ErrorText</item>
-        <item name="errorIconTint">@color/error
+        <item name="errorTextColor">@color/error</item>
+
+        <item name="helperTextTextAppearance">@style/UIKit.TextAppearance.HelperText</item>
+        <item name="helperTextTextColor">@color/description</item>
+    </style>
+
+
+    <style name="UIKit.Widget.PinKeyButton" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">@dimen/pin_key_size</item>
+        <item name="android:layout_height">@dimen/pin_key_size</item>
+        <item name="android:background">@drawable/selector_pin_key_background</item>
+        <item name="android:textColor">@color/selector_pin_key_text_color</item>
+        <item name="android:textSize">@dimen/pin_key_text_size</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">@dimen/pin_key_margin</item>
+        <item name="android:layout_marginEnd">@dimen/pin_key_margin</item>
+        <item name="android:layout_marginTop">@dimen/pin_key_margin</item>
+        <item name="android:layout_marginBottom">@dimen/pin_key_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:padding">0dp
         </item>
     </style>
 
+    <style name="UIKit.PinDot.Simple" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">12dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:src">@drawable/pin_dot_inactive</item>
+    </style>
+
     <style name="UIKit.Widget.TextInputEditText.Default" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
-        <item name="android:textAppearance">@style/UIKit.TextAppearance.InputText</item>
+        <item name="android:textAppearance">@style/text_regular</item>
         <item name="android:paddingTop">14dp</item>
         <item name="android:paddingBottom">14dp</item>
         <item name="android:background">@drawable/uikit_edit_text_error_background_selector</item>
         <item name="android:paddingStart">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="hintTextColor">@color/input_icon</item>
         <item name="android:paddingEnd">16dp</item>
     </style>
 
@@ -86,6 +121,33 @@
     <style name="UIKit.TextAppearance.ErrorText" parent="TextAppearance.MaterialComponents.Caption">
         <item name="android:textColor">@color/error</item>
         <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="UIKit.TextAppearance.BottomNav.Active" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/semi_bold
+        </item>
+        <item name="android:textSize">12sp</item> <!-- Уточни размер по Figma -->
+    </style>
+
+    <style name="UIKit.TextAppearance.BottomNav.Inactive" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/regular
+        </item>
+        <item name="android:textSize">12sp</item> <!-- Уточни размер по Figma -->
+    </style>
+
+    <style name="UIKit.Widget.BottomNavigationView.Default" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="background">@color/white</item>
+        <item name="itemIconTint">@color/uikit_bottom_nav_item_tint_selector</item>
+        <item name="itemTextColor">@color/uikit_bottom_nav_item_tint_selector</item>
+        <item name="itemTextAppearanceActive">@style/UIKit.TextAppearance.BottomNav.Active</item>
+        <item name="itemTextAppearanceInactive">@style/UIKit.TextAppearance.BottomNav.Inactive
+        </item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="elevation">0dp</item>
+        <item name="labelVisibilityMode">labeled</item>
+
     </style>
 
 </resources>

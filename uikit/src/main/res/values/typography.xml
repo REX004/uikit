@@ -15,7 +15,7 @@
         <item name="android:textSize">24sp</item>
         <item name="android:lineHeight">28dp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0.33</item>
+        <item name="android:letterSpacing">0.033</item>
         <item name="android:textAlignment">center</item>
     </style>
 
@@ -24,7 +24,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:lineHeight">28dp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0.38</item>
+        <item name="android:letterSpacing">0.038</item>
         <item name="android:textAlignment">center</item>
     </style>
 
@@ -33,7 +33,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:lineHeight">28dp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0.38</item>
+        <item name="android:letterSpacing">0.038</item>
         <item name="android:textAlignment">center</item>
     </style>
 
@@ -42,7 +42,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:lineHeight">28dp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">0.38</item>
+        <item name="android:letterSpacing">0.038</item>
         <item name="android:textAlignment">center</item>
     </style>
 
@@ -74,13 +74,18 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+<!--    <style name="UIKit.PinDot">-->
+<!--        <item name="android:layout_marginStart">8dp</item>-->
+<!--        <item name="android:layout_marginEnd">8dp</item>-->
+<!--        <item name="android:src">@drawable/pin_dot_inactive</item> &lt;!&ndash; По умолчанию неактивная &ndash;&gt;-->
+<!--    </style>-->
 
     <style name="headline_regular">
         <item name="android:fontFamily">@font/regular</item>
         <item name="android:textSize">16sp</item>
         <item name="android:lineHeight">20dp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">-0.32</item>
+        <item name="android:letterSpacing">-0.032</item>
         <item name="android:textAlignment">center</item>
     </style>
 
@@ -89,7 +94,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:lineHeight">20dp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:letterSpacing">-0.32</item>
+        <item name="android:letterSpacing">-0.032</item>
         <item name="android:textAlignment">center</item>
     </style>
 
@@ -156,6 +161,12 @@
         </item>
         <item name="android:paddingStart">@dimen/forty</item>
         <item name="android:paddingEnd">@dimen/forty</item>
+    </style>
+
+
+    <style name="UIKit.TextAppearance.SocialButton" parent="TextAppearance.MaterialComponents.Button">
+        <item name="textAppearanceBody1">@style/title_3_medium</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="UIKit.Widget.SearchView" parent="Widget.AppCompat.SearchView">

@@ -4,51 +4,43 @@
     <!--
         Описание назначения: Базовая тема для UI Kit.
         Определяет основные цвета, типографику по умолчанию и стили виджетов по умолчанию для UI Kit.
-        Автор: Твое Имя
+        Автор: Amir Temirzyanov
     -->
-    <style name="Theme.UIKit.Base" parent="Theme.Material3.DayNight.NoActionBar"> <!-- или Theme.MaterialComponents.DayNight.NoActionBar -->
+    <style name="Theme.UIKit.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar"> <!-- или Theme.MaterialComponents.DayNight.NoActionBar -->
         <item name="colorPrimary">@color/accent</item> <!-- Твой главный акцентный цвет -->
         <item name="colorOnPrimary">@color/white</item> <!-- Цвет текста/иконок на primary фоне -->
 
         <item name="colorSecondary">@color/accent_inactive
-        </item> <!-- Пример, если есть вторичный цвет -->
+        </item>
         <item name="colorOnSecondary">@color/black
-        </item> <!-- Цвет текста/иконок на secondary фоне -->
+        </item>
 
         <item name="android:colorBackground">@color/white
-        </item> <!-- Основной фон экранов (если белый) -->
+        </item>
         <item name="colorSurface">@color/white
-        </item> <!-- Цвет поверхностей (карточки, диалоги и т.д.) -->
-        <item name="colorOnSurface">@color/black</item> <!-- Цвет текста/иконок на surface фоне -->
+        </item>
+        <item name="colorOnSurface">@color/black</item>
 
-        <item name="colorError">@color/error</item> <!-- Цвет для ошибок -->
-        <item name="colorOnError">@color/white</item> <!-- Цвет текста/иконок на error фоне -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
 
-        <!-- Ссылка на стили типографики по умолчанию (из uikit/res/values/typography.xml) -->
-        <!-- Эти атрибуты определяют, какой стиль будет у TextView, если ему не задан явный style="@style/..." -->
         <item name="textAppearanceHeadline1">@style/title_1_heavy
-        </item> <!-- Пример, выбери свои главные стили -->
+        </item>
         <item name="textAppearanceHeadline2">@style/title_2_heavy</item>
         <item name="textAppearanceHeadline3">@style/title_3_semibold</item>
         <item name="textAppearanceHeadline4">@style/headline_medium
-        </item> <!-- Material имеет до Headline6 -->
+        </item>
         <item name="textAppearanceSubtitle1">@style/text_medium</item>
         <item name="textAppearanceBody1">@style/text_regular</item>
         <item name="textAppearanceCaption">@style/caption_regular</item>
         <item name="textAppearanceButton">@style/button_text_style
-        </item> <!-- Нужен стиль для текста кнопки -->
+        </item>
 
-        <!-- Стили виджетов по умолчанию (ссылки на твои стили из uikit/res/values/styles_components.xml) -->
-        <!-- Это означает, что если ты просто добавишь <Button .../> в макет, к нему применится UIKit.Widget.Button.Default -->
         <item name="materialButtonStyle">@style/UIKit.Widget.Button.Default
-        </item> <!-- Базовый стиль для всех кнопок -->
+        </item>
         <item name="textInputStyle">@style/UIKit.Widget.TextInputLayout.Default
-        </item> <!-- Базовый стиль для всех TextInputLayout -->
+        </item>
 
-        <!-- Можно определить кастомные атрибуты темы, если очень нужно, но для начала это не обязательно -->
-        <!-- <item name="myCustomAttribute">@style/MyCustomStyle</item> -->
-
-        <!-- Настройки для форм компонентов по умолчанию -->
         <item name="shapeAppearanceSmallComponent">@style/UIKit.ShapeAppearance.SmallComponent
         </item>
         <item name="shapeAppearanceMediumComponent">@style/UIKit.ShapeAppearance.MediumComponent
@@ -58,38 +50,34 @@
 
     </style>
 
-    <!-- Базовые стили для форм, на которые ссылается тема -->
     <style name="UIKit.ShapeAppearance.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">@dimen/eight</item> <!-- Например, 4dp -->
+        <item name="cornerSize">@dimen/eight</item>
     </style>
 
     <style name="UIKit.ShapeAppearance.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/eight
-        </item> <!-- Например, 8dp (твой @dimen/ten, если ten=8dp или 10dp) -->
+        </item>
     </style>
 
     <style name="UIKit.ShapeAppearance.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">@dimen/eight</item> <!-- Например, 12dp -->
+        <item name="cornerSize">@dimen/eight</item>
     </style>
 
     <style name="UIKit.Widget.Button.Default" parent="Widget.Material3.Button"> <!-- или Widget.MaterialComponents.Button -->
         <item name="android:fontFamily">@font/semi_bold</item>
         <item name="android:textSize">17sp</item>
         <item name="android:textAllCaps">false</item>
-        <item name="backgroundTint">@color/uikit_text_input_box_stroke_selector
-        </item> <!-- Используй селектор -->
-        <item name="android:textColor">@color/uikit_text_input_hint_text_color_selector
-        </item> <!-- Используй селектор -->
-        <item name="shapeAppearance">@style/UIKit.ShapeAppearance.Button
-        </item> <!-- Ссылайся на свой шейп для кнопок -->
-        <item name="android:paddingVertical">@dimen/twelve</item> <!-- Используй dimens -->
+        <item name="android:backgroundTint">@color/uikit_button_primary_background_tint_selector
+        </item>
+        <item name="android:textColor">@color/white</item>
+        <item name="shapeAppearance">@style/UIKit.ShapeAppearance.Button</item>
+        <item name="android:paddingVertical">@dimen/twelve</item>
         <item name="android:minHeight">@dimen/twenty_four</item>
     </style>
 
-    <!-- Пример стиля для текста кнопки, на который ссылается textAppearanceButton -->
     <style name="button_text_style" parent="TextAppearance.MaterialComponents.Button">
         <item name="android:fontFamily">@font/semi_bold</item>
         <item name="android:textSize">17sp</item>

@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">TMatule</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_screen">Главная</string>
+    <string name="catalog_screen">Каталог</string>
+    <string name="profile_screen">Профиль</string>
+    <string name="projects_screen">Проекты</string>
+    <string name="login_title">Добро пожаловать!</string>
+    <string name="login_description">Войдите, чтобы пользоваться функциями приложения</string>
+    <string name="example_mail_com">example@mail.com</string>
+    <string name="e_mail">Вход по E-mail</string>
+    <string name="password">Пароль</string>
+    <string name="next">Далее</string>
+    <string name="forgot_pass">Забыл пароль?</string>
+    <string name="log_with_other">Или войдите с помощью</string>
+    <string name="create_profile">Создание профиля</string>
+    <string name="create_profile_des_1">Без профиля вы не сможете создавать проекты.</string>
+    <string name="create_profile_des_2">В профиле будут храниться результаты проектов и ваши описания.</string>
+    <string name="miss_text">Пропустить</string>
+    <string name="create_pass">Создайте пароль</string>
+    <string name="create_pass_description">Для защиты вашиз персональных данных</string>
+    <string name="name_example">Чмо</string>
+    <string name="my_orders">Мои заказы</string>
+    <string name="notifications">Уведомления</string>
+    <string name="polit_conf">Политика конфедециональности</string>
+    <string name="cart">Корзина</string>
 </resources>

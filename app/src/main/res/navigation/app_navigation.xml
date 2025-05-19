@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/createPassAccFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="mad.training.tmatule.presentation.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="mad.training.tmatule.presentation.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/navigation_catalog"
+        android:name="mad.training.tmatule.presentation.catalog.CatalogFragment"
+        android:label="fragment_catalog"
+        tools:layout="@layout/fragment_catalog" />
+    <fragment
+        android:id="@+id/createPassAccFragment"
+        android:name="mad.training.tmatule.presentation.auth.pass.create_pass.CreatePassAccFragment"
+        android:label="fragment_create_pass_acc"
+        tools:layout="@layout/fragment_create_pass_acc" />
+    <fragment
+        android:id="@+id/createPassPhoneFragment"
+        android:name="mad.training.tmatule.presentation.auth.pass.create_pass.CreatePassPhoneFragment"
+        android:label="fragment_create_pass_phone"
+        tools:layout="@layout/fragment_create_pass_phone" />
+    <fragment
+        android:id="@+id/createProjectFragment"
+        android:name="mad.training.tmatule.presentation.projects.create_project.CreateProjectFragment"
+        android:label="fragment_create_project"
+        tools:layout="@layout/fragment_create_project" />
+    <fragment
+        android:id="@+id/createProfileFragment"
+        android:name="mad.training.tmatule.presentation.auth.create_profile.CreateProfileFragment"
+        android:label="fragment_create_profile"
+        tools:layout="@layout/fragment_create_profile" />
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="mad.training.tmatule.presentation.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_projects"
+        android:name="mad.training.tmatule.presentation.projects.ProjectsFragment"
+        android:label="fragment_projects"
+        tools:layout="@layout/fragment_projects" />
+    <fragment
+        android:id="@+id/telegramOtpFragment"
+        android:name="mad.training.tmatule.presentation.auth.pass.telegram.TelegramOtpFragment"
+        android:label="fragment_telegram_otp"
+        tools:layout="@layout/fragment_telegram_otp" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="mad.training.tmatule.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
